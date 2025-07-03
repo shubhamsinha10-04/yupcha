@@ -21,10 +21,10 @@ USERNAME = TWITTER_CLONE_API_KEY.split("_")[0] if "_" in TWITTER_CLONE_API_KEY e
 
 # === FastAPI App Setup ===
 app = FastAPI()
-allowed_origins = os.getenv("FRONTEND_URL", "http://localhost:5173").split(",")
+FRONTEND_URL = os.getenv("FRONTEND_URL", "http://localhost:5173")
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=allowed_origins,  # Or use env-based switching here
+    allow_origins=[FRONTEND_URL],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
