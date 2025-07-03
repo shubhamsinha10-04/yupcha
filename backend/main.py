@@ -9,7 +9,7 @@ from dotenv import load_dotenv
 # === Load environment variables ===
 load_dotenv()
 OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY")
-MODEL = os.getenv("MODEL", "deepseek/deepseek-chat-v3-0324:free")
+MODEL = os.getenv("MODEL", "deepseek/deepseek-r1:free")
 SUPABASE_URL = os.getenv("SUPABASE_URL", "").strip()
 SUPABASE_KEY = os.getenv("SUPABASE_KEY", "").strip()
 TWITTER_CLONE_API_KEY = os.getenv("TWITTER_CLONE_API_KEY", "").strip()
